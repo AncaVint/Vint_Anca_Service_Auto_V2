@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vint_Anca_Service_Auto_V2.MecanicPage"
+             Title="MecanicPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Mecanic"
+                Clicked="OnMecanicAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView"
+            Margin="20"
+            ItemSelected="OnMecanicViewItemSelected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding Nume}" FontAttributes="Bold"/>
+                        <Label Text="{Binding Prenume}"/>
+                        <Label Text="{Binding Telefon}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
