@@ -19,7 +19,34 @@ public partial class App : Application
             return database;
         }
     }
-
+    static ClientDatabase clientDatabase;
+    public static ClientDatabase ClientDatabase
+    {
+        get
+        {
+            if (clientDatabase == null)
+            {
+                clientDatabase = new
+               ClientDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+               LocalApplicationData), "Client.db3"));
+            }
+            return clientDatabase;
+        }
+    }
+    static ProgramareDatabase programareDatabase;
+    public static ProgramareDatabase ProgramareDatabase
+    {
+        get
+        {
+            if (programareDatabase == null)
+            {
+                programareDatabase = new
+               ProgramareDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+               LocalApplicationData), "Programare.db3"));
+            }
+            return programareDatabase;
+        }
+    }
     public App()
     {
         InitializeComponent();

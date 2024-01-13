@@ -1,41 +1,64 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Vint_Anca_Service_Auto_V2.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <!-- Partea de sus a paginii -->
+        <ScrollView Grid.Row="0">
+            <VerticalStackLayout Spacing="25" Padding="80,20,80,20" VerticalOptions="Center">
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                <Image Source="C:\Users\ancav\Desktop\an 3\Medii_De_Programare\Vint_Anca_Service_Auto_V2\Vint_Anca_Service_Auto_V2\Resources\Images\logo.png"
+                       SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                       HeightRequest="200"
+                       HorizontalOptions="Center" />
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+                <Label Text="Bine ați venit!"
+                       SemanticProperties.HeadingLevel="Level1"
+                       FontSize="32"
+                       HorizontalOptions="Center" />
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                <Label Text="Suntem o echipă dedicată de profesioniști pasionați de mașini, gata să vă oferim cele mai calitative și complete servicii auto. De la întreținere și diagnosticare la reparații complexe, ne-am angajat să vă asigurăm o experiență de conducere sigură și fără probleme. Folosim tehnologii de ultimă generație și avem mecanici experimentați care pun pasiune și atenție la detalii în fiecare intervenție."
+                       FontSize="16"
+                       HorizontalOptions="Center"
+                       Padding="80,10,40,80"
+                       TextColor="Gray" />
+            </VerticalStackLayout>
+        </ScrollView>
 
-        </VerticalStackLayout>
-    </ScrollView>
+        <!-- Partea de jos a paginii (footer) -->
+        <StackLayout Grid.Row="1"
+                     BackgroundColor="#f7ede2"
+                     Spacing="10"
+                     Padding="20"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="End">
+
+            <Label Text="Contact:"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   TextColor="#144337" />
+
+            <Label Text="Adresa: Cluj-Napoca, Strada Eftimie Murgu"
+                   FontSize="16"
+                   TextColor="#144337"
+                   HorizontalOptions="Start" />
+
+            <Label Text="Telefon:0786765456"
+                   FontSize="16"
+                   TextColor="#144337"
+                   HorizontalOptions="Start" />
+
+            <Label Text="Email: serviceauto@gmail.com"
+                   FontSize="16"
+                   TextColor="#144337"
+                   HorizontalOptions="Start" />
+
+        </StackLayout>
+    </Grid>
 
 </ContentPage>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vint_Anca_Service_Auto_V2.ClientiPage"
+             Title="ClientiPage">
+    <StackLayout Margin="20">
+        <Editor Placeholder="Nume client"
+             Text="{Binding Nume}"    
+             HeightRequest="100" />
+        <Editor Placeholder="Prenume client"
+            Text="{Binding Prenume}"    
+            HeightRequest="100" />
+        <Editor Placeholder="Telefon client"
+            Text="{Binding Telefon}"    
+            HeightRequest="100" />
+        <Editor Placeholder="Email client"
+            Text="{Binding Email}"    
+            HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="Save"
+                Clicked="OnSaveButtonClicked" />
+            <Button Grid.Column="1"
+                Text="Delete"
+                Clicked="OnDeleteButtonClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

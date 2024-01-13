@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Vint_Anca_Service_Auto_V2.ProgramareEntryPage"
+             Title="ProgramareEntryPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add Programare"
+                     Clicked="OnProgramareAddedClicked" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="listView"
+              Margin="20"
+              ItemSelected="OnProgramareViewItemSelected"
+              SeparatorVisibility="Default"
+              SeparatorColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="20"
+                                 BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"
+                                 Orientation="Horizontal">
+                        
+                        <StackLayout Margin="20,20,20,20">
+                            <Label Text="{Binding NrInmatriculare}" FontAttributes="Bold"/>
+                            <Label Text="{Binding Client}"/>
+                            <Label Text="{Binding DataOra}"/>
+                            <Label Text="{Binding Mecanic}" />
+                        </StackLayout>
+                        <CheckBox HorizontalOptions="EndAndExpand" IsChecked="{Binding IsSelected, Mode=TwoWay}" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

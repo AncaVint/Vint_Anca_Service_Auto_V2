@@ -5,19 +5,27 @@
              Title="MecanicPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add Mecanic"
-                Clicked="OnMecanicAddedClicked" />
+                     Clicked="OnMecanicAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"
-            Margin="20"
-            ItemSelected="OnMecanicViewItemSelected">
+              Margin="20"
+              ItemSelected="OnMecanicViewItemSelected"
+              SeparatorVisibility="Default"
+              SeparatorColor="{AppThemeBinding Light={StaticResource Gray200}, Dark={StaticResource Gray500}}">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout>
-                        <Label Text="{Binding Nume}" FontAttributes="Bold"/>
-                        <Label Text="{Binding Prenume}"/>
-                        <Label Text="{Binding Telefon}" />
+                    <StackLayout Padding="10"
+                                 BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource Gray950}}"
+                                 Orientation="Horizontal">
+                        <Image Source="C:\Users\ancav\Desktop\an 3\Medii_De_Programare\Vint_Anca_Service_Auto_V2\Vint_Anca_Service_Auto_V2\Resources\Images\mecanic.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit"/>
+                        <StackLayout Margin="10,0,0,0">
+                            <Label Text="{Binding Nume}" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+                            <Label Text="{Binding Prenume}" TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+                            <Label Text="{Binding Telefon}" TextColor="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource White}}"/>
+                        </StackLayout>
                     </StackLayout>
+                    
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
